@@ -26,7 +26,7 @@ namespace Canvia.API.Controllers
             }
             catch (Exception ex)
             {
-                return Ok(new { success = false, data = ex.Message });
+                return Ok(Fail(ex.Message));
             }
         }
 
@@ -50,11 +50,11 @@ namespace Canvia.API.Controllers
             try
             {
                 var Result = customerBusiness.Create(customer);
-                return Ok(new { success = true, data = "Cliente creado exitosamente" });
+                return Ok(Success("Cliente creado exitosamente"));
             }
             catch (Exception ex)
             {
-                return Ok(new { success = false, data = ex.Message });
+                return Ok(Fail(ex.Message));
             }
         }
 
@@ -64,11 +64,11 @@ namespace Canvia.API.Controllers
             try
             {
                 var Result = customerBusiness.Edit(customer);
-                return Ok(new { success = true, data = "Cliente editado exitosamente" });
+                return Ok(Success("Cliente editado exitosamente"));
             }
             catch (Exception ex)
             {
-                return Ok(new { success = false, data = ex.Message });
+                return Ok(Fail(ex.Message));
             }
         }
     }

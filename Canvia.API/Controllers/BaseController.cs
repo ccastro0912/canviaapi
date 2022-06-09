@@ -1,4 +1,4 @@
-﻿using Canvia.Domain.Models;
+﻿using Canvia.Infrastructure.Orm.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Canvia.API.Controllers
